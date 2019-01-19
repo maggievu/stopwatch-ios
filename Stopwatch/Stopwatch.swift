@@ -11,7 +11,6 @@ import Foundation
 class Stopwatch {
     private var startTime: Date?
     private var resumeTime: Double = 0.0
-    private var stoppedTime: Date?
     
     var elapsedTime: TimeInterval {
         if let startTime = self.startTime { // if self.startTime != nil

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButtonLabel: UIButton!
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        print("Start tapped")
+        print("Start tapping")
         stopwatch.start()
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
-        print("Stop tapped")
+        print("Stop tapping")
         stopwatch.stop()
         
         if !stopwatch.isRunning && elapsedTimeLabel.text != "00:00.0" {
@@ -79,6 +79,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
 }
 
+extension UIButton {
+    open override func draw(_ rect: CGRect) {
+        //provide custom style
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+    }
+}
