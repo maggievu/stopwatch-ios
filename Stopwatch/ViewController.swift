@@ -40,10 +40,10 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resumeButtonTapped(_ sender: UIButton) {
-        stopwatch.start()
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
-    }
+//    @IBAction func resumeButtonTapped(_ sender: UIButton) {
+//        stopwatch.start()
+//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
+//    }
     
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     @objc func updateElapsedTimeLabel(timer: Timer) {
         print("updating elapsed time")
         if stopwatch.isRunning {
+            
 //        Original simple programming
 //            elapsedTimeLabel.text = "\(stopwatch.elapsedTime)"
             
