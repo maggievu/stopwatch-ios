@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-ka-60S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-ka-60S">
                                 <rect key="frame" x="16" y="120" width="343" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" red="0.17494775730000001" green="0.46406532290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7nS-lC-hxT"/>
-                                    <constraint firstAttribute="width" constant="200" id="xc9-PZ-cP6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="xc9-PZ-cP6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <state key="normal" title="Start">
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="87.5" y="467" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.17494775730000001" green="0.46406532290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="0Fw-Nd-Ntl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0Fw-Nd-Ntl"/>
                                     <constraint firstAttribute="height" constant="50" id="NnM-i1-DWQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
@@ -59,7 +59,7 @@
                                 <color key="backgroundColor" red="0.17494775730000001" green="0.46406532290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NWU-WU-t7f"/>
-                                    <constraint firstAttribute="width" constant="200" id="hCN-hQ-xft"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hCN-hQ-xft"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <state key="normal" title="Reset">

@@ -10,25 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let stopwatch = Stopwatch()
-    
-    var timer: Timer?
-
     @IBOutlet weak var elapsedTimeLabel: UILabel!
-    
     @IBOutlet weak var startButtonLabel: UIButton!
+    
+    let stopwatch = Stopwatch()
+    var timer: Timer?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         print("Start tapping")
         stopwatch.start()
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
-        
-//        Original simple programming
-//        while stopwatch.isRunning {
-//            print("updating")
-//            elapsedTimeLabel.text = "\(stopwatch.elapsedTime)"
-//        }
     }
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
@@ -40,12 +36,6 @@ class ViewController: UIViewController {
         }
     }
     
-//    @IBAction func resumeButtonTapped(_ sender: UIButton) {
-//        stopwatch.start()
-//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
-//    }
-    
-    
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         stopwatch.reset()
         elapsedTimeLabel.text = "00:00.0"
@@ -55,9 +45,6 @@ class ViewController: UIViewController {
     @objc func updateElapsedTimeLabel(timer: Timer) {
         print("updating elapsed time")
         if stopwatch.isRunning {
-            
-//        Original simple programming
-//            elapsedTimeLabel.text = "\(stopwatch.elapsedTime)"
             
             let minutes = Int(stopwatch.elapsedTime / 60)
             let seconds = Int(stopwatch.elapsedTime.truncatingRemainder(dividingBy: 60))
@@ -74,18 +61,5 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-}
-
-extension UIButton {
-    open override func draw(_ rect: CGRect) {
-        //provide custom style
-        self.layer.cornerRadius = 10
-        self.layer.masksToBounds = true
-    }
 }

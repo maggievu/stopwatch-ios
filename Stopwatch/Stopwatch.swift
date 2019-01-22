@@ -33,15 +33,11 @@ class Stopwatch {
     func stop() {
 //        This is to calculate the original starting time
 //        resumeTime = Date().addingTimeInterval(-elapsedTime)
-        resumeTime = elapsedTime
-        startTime = nil
+        if isRunning {
+            resumeTime = elapsedTime
+            startTime = nil
+        }
     }
-    
-//    func resume() { // Resume and Start buttons can become one
-//        if !isRunning {
-//            startTime = Date()
-//        }
-//    }
     
     func reset() {
         startTime = nil

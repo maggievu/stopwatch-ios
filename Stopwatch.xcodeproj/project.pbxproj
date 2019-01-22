@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9CD75021F6CC00005D837A /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CD74F21F6CC00005D837A /* UIButton.swift */; };
 		7AEED6BE21ED6BBB0034CA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEED6BD21ED6BBB0034CA27 /* AppDelegate.swift */; };
 		7AEED6C021ED6BBB0034CA27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEED6BF21ED6BBB0034CA27 /* ViewController.swift */; };
 		7AEED6C321ED6BBB0034CA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AEED6C121ED6BBB0034CA27 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A9CD74F21F6CC00005D837A /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		7AEED6BA21ED6BBB0034CA27 /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AEED6BD21ED6BBB0034CA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AEED6BF21ED6BBB0034CA27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				7AEED6BD21ED6BBB0034CA27 /* AppDelegate.swift */,
 				7AEED6BF21ED6BBB0034CA27 /* ViewController.swift */,
 				7AEED6C121ED6BBB0034CA27 /* Main.storyboard */,
+				7A9CD74F21F6CC00005D837A /* UIButton.swift */,
 				7AEED6C421ED6BBD0034CA27 /* Assets.xcassets */,
 				7AEED6C621ED6BBD0034CA27 /* LaunchScreen.storyboard */,
 				7AEED6C921ED6BBD0034CA27 /* Info.plist */,
@@ -141,6 +144,7 @@
 				7AEED6C021ED6BBB0034CA27 /* ViewController.swift in Sources */,
 				7AEED6D021ED6D810034CA27 /* Stopwatch.swift in Sources */,
 				7AEED6BE21ED6BBB0034CA27 /* AppDelegate.swift in Sources */,
+				7A9CD75021F6CC00005D837A /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
