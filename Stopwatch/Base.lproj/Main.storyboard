@@ -18,43 +18,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-ka-60S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpJ-ka-60S">
                                 <rect key="frame" x="16" y="120" width="343" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-51-JO1">
+                                <rect key="frame" x="87.5" y="367" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.17494775730000001" green="0.46406532290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7nS-lC-hxT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="xc9-PZ-cP6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Naj-pM-nOu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9W-OC-aZd">
-                                <rect key="frame" x="298" y="419" width="61" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Stop"/>
+                                <rect key="frame" x="87.5" y="467" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.17494775730000001" green="0.46406532290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0Fw-Nd-Ntl"/>
+                                    <constraint firstAttribute="height" constant="50" id="NnM-i1-DWQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jN-lD-14T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-51-JO1">
-                                <rect key="frame" x="16" y="419" width="62" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfA-Ki-zai">
+                                <rect key="frame" x="87.5" y="567" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.17494775730000001" green="0.46406532290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NWU-WU-t7f"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hCN-hQ-xft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Naj-pM-nOu"/>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fno-op-Pb9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mfA-Ki-zai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C1m-RK-U23"/>
+                            <constraint firstItem="mfA-Ki-zai" firstAttribute="top" secondItem="l9W-OC-aZd" secondAttribute="bottom" constant="50" id="CZP-ce-Bdc"/>
                             <constraint firstItem="KpJ-ka-60S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Gpv-2D-PFd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mfA-Ki-zai" secondAttribute="bottom" constant="50" id="Jyy-j2-Dc8"/>
+                            <constraint firstItem="l9W-OC-aZd" firstAttribute="top" secondItem="fw7-51-JO1" secondAttribute="bottom" constant="50" id="L4B-Cq-LuV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KpJ-ka-60S" secondAttribute="trailing" constant="16" id="PDY-e1-2cA"/>
-                            <constraint firstItem="l9W-OC-aZd" firstAttribute="centerY" secondItem="fw7-51-JO1" secondAttribute="centerY" id="VW6-7n-WOj"/>
-                            <constraint firstAttribute="trailing" secondItem="l9W-OC-aZd" secondAttribute="trailing" constant="16" id="pH7-C1-1s8"/>
+                            <constraint firstItem="fw7-51-JO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VL7-1V-NHo"/>
                             <constraint firstItem="KpJ-ka-60S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uIl-9T-ZHQ"/>
-                            <constraint firstItem="fw7-51-JO1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="vol-hj-Etw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fw7-51-JO1" secondAttribute="bottom" constant="200" id="wVf-wW-f7w"/>
+                            <constraint firstItem="l9W-OC-aZd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOy-pb-Odb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="elapsedTimeLabel" destination="KpJ-ka-60S" id="zNe-T4-386"/>
+                        <outlet property="startButtonLabel" destination="fw7-51-JO1" id="MP0-FQ-a5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

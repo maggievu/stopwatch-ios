@@ -10,10 +10,11 @@ import Foundation
 
 class Stopwatch {
     private var startTime: Date?
+    private var resumeTime: Double = 0.0
     
     var elapsedTime: TimeInterval {
         if let startTime = self.startTime { // if self.startTime != nil
-            return -startTime.timeIntervalSinceNow
+            return resumeTime + -startTime.timeIntervalSinceNow
         } else {
             return 0
         }
@@ -24,11 +25,23 @@ class Stopwatch {
     }
     
     func start() {
-        startTime = Date()
+        if !isRunning {
+            startTime = Date()
+        }
     }
     
     func stop() {
+//        This is to calculate the original starting time
+//        resumeTime = Date().addingTimeInterval(-elapsedTime)
+        if isRunning {
+            resumeTime = elapsedTime
+            startTime = nil
+        }
+    }
+    
+    func reset() {
         startTime = nil
+        resumeTime = 0
     }
     
     
